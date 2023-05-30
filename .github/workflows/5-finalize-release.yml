@@ -30,6 +30,7 @@ jobs:
           echo "current_step=$(cat ./.github/script/STEP)" >> $GITHUB_OUTPUT
     outputs:
       current_step: ${{ steps.get_step.outputs.current_step }}
+      ref_name: ${{ github.ref_name }}
 
   on_release_published:
     name: On release v1.0 published
